@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#FFFFFFFF</color>
+    <color name="black">#FF000000</color>
+    <color name="scrim">#99000000</color>
+
+    <!-- Paleta púrpura de la marca (modo claro) -->
+    <color name="purple_primary">#6750A4</color>
+    <color name="purple_on_primary">#FFFFFFFF</color>
+    <color name="purple_container">#EADDFF</color>
+    <color name="purple_on_container">#21005D</color>
+    <color name="purple_secondary">#625B71</color>
+
+    <!-- Borde de tarjetas y botones: negro en modo claro (ver values-night para el oscuro) -->
+    <color name="app_border">@color/black</color>
+</resources>

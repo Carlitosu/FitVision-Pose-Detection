@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">FitVision</string>
+
+    <!-- Menú principal -->
+    <string name="main_title">FitVision</string>
+    <string name="main_subtitle">Monitorea tu biomecánica corporal y cuenta repeticiones mediante esqueleto de visión artificial</string>
+    <string name="btn_live">Cámara en vivo</string>
+    <string name="btn_capture">Tomar fotografía</string>
+    <string name="btn_gallery">Elegir de la galería</string>
+    <string name="main_footer">Grupo 3 · Detección de Pose</string>
+    <string name="section_training">ENTRENAMIENTO</string>
+    <string name="section_help">AYUDA E INFORMACIÓN</string>
+    <string name="theme_toggle_desc">Cambiar entre modo claro y oscuro</string>
+    <string name="btn_tips">Consejos</string>
+    <string name="btn_credits">Créditos</string>
+
+    <!-- Consejos y créditos -->
+    <string name="tips_subtitle">Recomendaciones breves para entrenar con buena técnica.</string>
+    <string name="credits_group">Grupo 3</string>
+    <string name="credits_course">Computación Gráfica y Visual</string>
+    <string name="credits_creators_label">CREADORES PRINCIPALES</string>
+    <string name="credits_creator_1">Carlos Chávez</string>
+    <string name="credits_creator_2">Samir Roque</string>
+    <string name="credits_creator_3">Gilberto Valladares</string>
+    <string name="credits_tech_label">TECNOLOGÍAS</string>
+    <string name="credits_tech_1">Android Studio</string>
+    <string name="credits_tech_2">Java</string>
+    <string name="credits_tech_3">Gradle</string>
+    <string name="credits_tech_4">Google ML Kit Pose Detection</string>
+    <string name="credits_tech_5">CameraX</string>
+    <string name="credits_tech_6">Material Design 3</string>
+    <string name="credits_tech_7">TextToSpeech</string>
+
+    <!-- Ejercicios -->
+    <string name="exercise_squat">Sentadilla</string>
+    <string name="exercise_pushup">Flexión</string>
+    <string name="exercise_none">Sin ejercicio</string>
+
+    <!-- Cámara en vivo -->
+    <string name="live_title">Cámara en vivo</string>
+    <string name="status_searching">Buscando persona…</string>
+    <string name="status_detected">Persona detectada</string>
+    <string name="label_exercise">EJERCICIO</string>
+    <string name="label_reps">REPETICIONES</string>
+    <string name="angle_format">Ángulo %1$d°</string>
+    <string name="angle_empty">Ángulo --</string>
+    <string name="btn_controls_show">Controles ▾</string>
+    <string name="btn_controls_hide">Ocultar controles ▴</string>
+    <string name="waiting_exercise">Colócate de lado con el cuerpo completo visible.</string>
+    <string name="btn_reset">Reiniciar</string>
+    <string name="btn_switch_camera">Cambiar cámara</string>
+    <string name="btn_voice_on">Voz: activada</string>
+    <string name="btn_voice_off">Voz: desactivada</string>
+
+    <!-- Correcciones de postura -->
+    <string name="feedback_ok">¡Buena postura!</string>
+    <string name="alert_back_straight">Mantén la espalda recta</string>
+    <string name="alert_body_straight">Mantén el cuerpo alineado: no subas ni bajes la cadera</string>
+    <string name="alert_squat_deeper">Baja más en la sentadilla</string>
+    <string name="alert_pushup_deeper">Baja más el pecho</string>
+
+    <!-- Análisis de foto o video de la galería -->
+    <string name="static_title">Análisis de postura</string>
+    <string name="static_label">RESULTADO</string>
+    <string name="static_analyzing">Analizando…</string>
+    <string name="static_video_progress">Analizando video… %1$d%%</string>
+    <string name="result_exercise">Ejercicio: %1$s</string>
+    <string name="result_angle">Ángulo principal: %1$d°</string>
+    <string name="result_angle_unavailable">Ángulo principal: no visible</string>
+    <string name="result_reps">Repeticiones: %1$d</string>
+    <string name="result_frames">Fotogramas analizados: %1$d</string>
+    <string name="btn_speak">Reproducir</string>
+    <string name="btn_close">Volver</string>
+    <string name="no_person">No se detectó ninguna persona</string>
+    <string name="no_exercise">No se reconoció ningún ejercicio</string>
+
+    <!-- Mensajes de error -->
+    <string name="permission_camera_denied">Se necesita permiso de cámara para el entrenamiento en vivo.</string>
+    <string name="photo_cancelled">Captura cancelada</string>
+    <string name="error_create_file">No se pudo preparar el archivo de la foto</string>
+    <string name="error_load_image">No se pudo cargar la imagen</string>
+    <string name="error_video">No se pudo analizar el video</string>
+    <string name="error_detection">Error al detectar la pose</string>
+    <string name="error_camera">No se pudo iniciar la cámara</string>
+    <string name="error_no_image">No se recibió ninguna imagen</string>
+</resources>

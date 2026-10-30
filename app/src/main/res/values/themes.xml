@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Material Design 3 en modo claro: púrpura, blanco y negro -->
+    <style name="Theme.SignTranslator" parent="Theme.Material3.DayNight">
+        <item name="colorPrimary">@color/purple_primary</item>
+        <item name="colorOnPrimary">@color/purple_on_primary</item>
+        <item name="colorPrimaryContainer">@color/purple_container</item>
+        <item name="colorOnPrimaryContainer">@color/purple_on_container</item>
+        <item name="colorSecondary">@color/purple_secondary</item>
+    </style>
+
+</resources>

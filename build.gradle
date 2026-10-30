@@ -1,0 +1,4 @@
+// Configuración de nivel raíz: solo declara los plugins que usan los módulos.
+plugins {
+    id 'com.android.application' version '9.4.1' apply false
+}

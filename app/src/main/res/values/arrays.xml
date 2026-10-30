@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Opciones del selector de ejercicio; el orden debe coincidir con Exercise.MANUAL_CHOICES (tras "Automático") -->
+    <string-array name="exercise_choices">
+        <item>Automático</item>
+        <item>@string/exercise_squat</item>
+        <item>@string/exercise_pushup</item>
+    </string-array>
+
+    <!-- Consejos de postura mostrados en la pantalla de consejos -->
+    <string-array name="posture_tips">
+        <item>Calienta 5 minutos antes de entrenar: movilidad de caderas, rodillas y hombros.</item>
+        <item>Colócate de lado a la cámara, con el cuerpo completo visible, para que los ángulos sean fiables.</item>
+        <item>En la sentadilla, separa los pies a la altura de los hombros y mantén la espalda recta.</item>
+        <item>Baja en la sentadilla hasta donde tu movilidad lo permita sin perder la postura.</item>
+        <item>En la flexión, mantén el cuerpo en línea recta: no dejes caer la cadera ni la levantes.</item>
+        <item>Baja el pecho de forma controlada, sin dejar que los codos se abran demasiado.</item>
+        <item>Respira: exhala al subir el esfuerzo e inhala al bajar.</item>
+        <item>Descansa entre series para mantener la técnica; la calidad vale más que la cantidad.</item>
+        <item>Si sientes dolor (no solo cansancio), detente y consulta a un profesional.</item>
+    </string-array>
+</resources>

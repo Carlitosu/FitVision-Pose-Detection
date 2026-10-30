@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- En modo oscuro el borde negro desaparece sobre el fondo negro, así que se usa blanco -->
+    <color name="app_border">@color/white</color>
+</resources>
