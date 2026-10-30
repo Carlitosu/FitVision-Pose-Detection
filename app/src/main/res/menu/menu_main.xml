@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- Solo icono (sol o luna según el tema); el título sirve de descripción para accesibilidad -->
+    <item
+        android:id="@+id/action_theme"
+        android:title="@string/theme_toggle_desc"
+        app:showAsAction="always" />
+</menu>

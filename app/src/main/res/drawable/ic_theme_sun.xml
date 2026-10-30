@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Sol: se muestra mientras la app está en modo claro -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24"
+    android:tint="?attr/colorControlNormal">
+
+    <path
+        android:fillColor="#FF000000"
+        android:pathData="M12,7A5,5 0 1 0 12,17A5,5 0 1 0 12,7z" />
+
+    <path
+        android:strokeColor="#FF000000"
+        android:strokeWidth="2"
+        android:strokeLineCap="round"
+        android:pathData="M12,2V4 M12,20V22 M2,12H4 M20,12H22 M4.93,4.93L6.34,6.34 M17.66,17.66L19.07,19.07 M4.93,19.07L6.34,17.66 M17.66,6.34L19.07,4.93" />
+</vector>
