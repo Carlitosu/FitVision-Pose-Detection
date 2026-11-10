@@ -26,13 +26,3 @@ medir los ángulos de las articulaciones, contar repeticiones y avisar cuando la
 - **Voz:** TextToSpeech
 - **Notificaciones y alarmas:** AlarmManager y NotificationManager
 
-## Cómo ejecutarla
-
-1. Abre la carpeta del proyecto en Android Studio y espera a que Gradle sincronice.
-2. Ejecútala en un teléfono Android 7.0 (API 24) o superior.
-3. Para medir bien los ángulos, colócate de lado a la cámara con el cuerpo completo visible.
-
-## Limitaciones
-
-- Los ángulos se miden en 2D, así que una cámara de frente puede dar lecturas imprecisas.
-- Los umbrales de ángulo son heurísticas que deben calibrarse con grabaciones reales.
