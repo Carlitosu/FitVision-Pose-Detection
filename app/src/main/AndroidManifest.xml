@@ -4,6 +4,11 @@
 
     <uses-feature android:name="android.hardware.camera" android:required="false" />
     <uses-feature android:name="android.hardware.camera.any" android:required="false" />
+    <!-- Notificaciones para avisos de rondas y recordatorios (Android 13+ / API 33+) -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+
 
     <!-- Cámara para la traducción en vivo (permiso de ejecución) -->
     <uses-permission android:name="android.permission.CAMERA" />
@@ -55,6 +60,20 @@
             android:exported="false"
             android:label="@string/btn_credits"
             android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".RoutineScheduleActivity"
+            android:exported="false"
+            android:parentActivityName=".MainActivity" />
+
+        <!-- Receptor de la alarma de rutinas -->
+        <receiver
+            android:name=".AlarmaReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
 
         <!-- Necesario para pasar la foto de la cámara nativa a la app -->
         <provider
