@@ -20,8 +20,11 @@
     <string name="credits_group">Grupo 3</string>
     <string name="credits_course">Computación Gráfica y Visual</string>
     <string name="credits_creators_label">CREADORES PRINCIPALES</string>
+    <string name="credits_initials_1">CC</string>
     <string name="credits_creator_1">Carlos Chávez</string>
+    <string name="credits_initials_2">SR</string>
     <string name="credits_creator_2">Samir Roque</string>
+    <string name="credits_initials_3">GV</string>
     <string name="credits_creator_3">Gilberto Valladares</string>
     <string name="credits_tech_label">TECNOLOGÍAS</string>
     <string name="credits_tech_1">Android Studio</string>
@@ -31,6 +34,12 @@
     <string name="credits_tech_5">CameraX</string>
     <string name="credits_tech_6">Material Design 3</string>
     <string name="credits_tech_7">TextToSpeech</string>
+
+    <!-- Agenda de Rutinas -->
+    <string name="main_schedule_round">Agendar Ronda (Recordatorio)</string>
+    <string name="schedule_title">Agendar Nueva Ronda</string>
+    <string name="schedule_subtitle">Selecciona la hora y programa tus recordatorios de entrenamiento.</string>
+    <string name="schedule_save_btn">Guardar y Programar Alarma</string>
 
     <!-- Ejercicios -->
     <string name="exercise_squat">Sentadilla</string>
