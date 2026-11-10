@@ -3,31 +3,32 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="?attr/colorSurfaceVariant"
     android:fillViewport="true">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
         android:padding="20dp">
 
-        <!-- Tarjeta de bienvenida: solo el párrafo descriptivo, centrado y con más presencia -->
+        <!-- Tarjeta de bienvenida principal con fondo de color primario -->
         <com.google.android.material.card.MaterialCardView
             style="@style/Widget.Material3.CardView.Filled"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:minHeight="220dp"
+            android:minHeight="200dp"
             app:cardBackgroundColor="?attr/colorPrimaryContainer"
-            app:cardCornerRadius="28dp"
-            app:strokeColor="@color/app_border"
-            app:strokeWidth="1.5dp">
+            app:cardCornerRadius="32dp"
+            app:cardElevation="4dp"
+            app:strokeWidth="0dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
                 android:orientation="vertical"
-                android:padding="32dp">
+                android:padding="28dp">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -35,115 +36,126 @@
                     android:fontFamily="sans-serif-medium"
                     android:includeFontPadding="false"
                     android:text="@string/main_title"
-                    android:textAppearance="?attr/textAppearanceDisplaySmall"
+                    android:textAppearance="?attr/textAppearanceHeadlineMedium"
                     android:textColor="?attr/colorOnPrimaryContainer"
                     android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
+                    android:layout_marginTop="10dp"
                     android:gravity="center"
-                    android:lineSpacingMultiplier="1.15"
+                    android:lineSpacingMultiplier="1.2"
                     android:text="@string/main_subtitle"
-                    android:textAppearance="?attr/textAppearanceTitleMedium"
+                    android:textAppearance="?attr/textAppearanceBodyLarge"
                     android:textColor="?attr/colorOnPrimaryContainer" />
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
 
-        <!-- Acciones de entrenamiento: mismo estilo, color y forma -->
+        <!-- Acciones de entrenamiento -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="28dp"
+            android:layout_marginTop="24dp"
             android:text="@string/section_training"
-            android:textAppearance="?attr/textAppearanceLabelMedium"
-            android:textColor="?attr/colorPrimary" />
+            android:textAppearance="?attr/textAppearanceLabelLarge"
+            android:textColor="?attr/colorPrimary"
+            android:textStyle="bold" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnLive"
             android:layout_width="match_parent"
-            android:layout_height="64dp"
-            android:layout_marginTop="8dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp"
             android:text="@string/btn_live"
             app:cornerRadius="20dp"
-            app:strokeColor="@color/app_border"
-            app:strokeWidth="1.5dp"
             app:icon="@android:drawable/ic_menu_view"
-            app:iconGravity="textStart" />
+            app:iconGravity="textStart"
+            app:iconPadding="12dp" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnCapture"
             android:layout_width="match_parent"
-            android:layout_height="64dp"
-            android:layout_marginTop="12dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp"
             android:text="@string/btn_capture"
             app:cornerRadius="20dp"
-            app:strokeColor="@color/app_border"
-            app:strokeWidth="1.5dp"
             app:icon="@android:drawable/ic_menu_camera"
-            app:iconGravity="textStart" />
+            app:iconGravity="textStart"
+            app:iconPadding="12dp" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnGallery"
             android:layout_width="match_parent"
-            android:layout_height="64dp"
-            android:layout_marginTop="12dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp"
             android:text="@string/btn_gallery"
             app:cornerRadius="20dp"
-            app:strokeColor="@color/app_border"
-            app:strokeWidth="1.5dp"
             app:icon="@android:drawable/ic_menu_gallery"
-            app:iconGravity="textStart" />
+            app:iconGravity="textStart"
+            app:iconPadding="12dp" />
+
+        <!-- Botón para Agendar Ronda -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSchedule"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp"
+            android:text="Agendar Ronda (Recordatorio)"
+            app:cornerRadius="20dp"
+            app:icon="@android:drawable/ic_menu_agenda"
+            app:iconGravity="textStart"
+            app:iconPadding="12dp" />
 
         <!-- Ayuda e información -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="28dp"
+            android:layout_marginTop="24dp"
             android:text="@string/section_help"
-            android:textAppearance="?attr/textAppearanceLabelMedium"
-            android:textColor="?attr/colorPrimary" />
+            android:textAppearance="?attr/textAppearanceLabelLarge"
+            android:textColor="?attr/colorPrimary"
+            android:textStyle="bold" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="10dp"
             android:orientation="horizontal">
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnTips"
                 style="@style/Widget.Material3.Button.OutlinedButton"
                 android:layout_width="0dp"
-                android:layout_height="56dp"
+                android:layout_height="54dp"
                 android:layout_weight="1"
                 android:text="@string/btn_tips"
                 app:cornerRadius="18dp"
-                app:strokeColor="@color/app_border"
-                app:strokeWidth="1.5dp"
                 app:icon="@android:drawable/ic_menu_help"
-                app:iconGravity="textStart" />
+                app:iconGravity="textStart"
+                app:iconPadding="8dp" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnCredits"
                 style="@style/Widget.Material3.Button.OutlinedButton"
                 android:layout_width="0dp"
-                android:layout_height="56dp"
+                android:layout_height="54dp"
                 android:layout_marginStart="12dp"
                 android:layout_weight="1"
                 android:text="@string/btn_credits"
                 app:cornerRadius="18dp"
-                app:strokeColor="@color/app_border"
-                app:strokeWidth="1.5dp"
                 app:icon="@android:drawable/ic_menu_info_details"
-                app:iconGravity="textStart" />
+                app:iconGravity="textStart"
+                app:iconPadding="8dp" />
         </LinearLayout>
 
         <!-- Pie de página discreto -->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginBottom="12dp"
             android:gravity="center"
             android:text="@string/main_footer"
             android:textAppearance="?attr/textAppearanceLabelSmall"

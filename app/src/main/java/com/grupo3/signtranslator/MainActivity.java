@@ -4,6 +4,7 @@ import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -24,7 +25,6 @@ import java.io.IOException;
 /** Menú principal: cámara en vivo, foto con la cámara nativa o imagen/video de la galería. */
 public class MainActivity extends AppCompatActivity {
 
-    private ActivityMainBinding binding;
     private Uri pendingPhotoUri;
 
     private final ActivityResultLauncher<String> cameraPermissionLauncher =
@@ -33,6 +33,16 @@ public class MainActivity extends AppCompatActivity {
                     openLivePreview();
                 } else {
                     Toast.makeText(this, R.string.permission_camera_denied, Toast.LENGTH_LONG).show();
+                }
+            });
+
+    /** Lanzador para solicitar permiso de notificaciones en Android 13+ (API 33+) */
+    private final ActivityResultLauncher<String> notificationPermissionLauncher =
+            registerForActivityResult(new ActivityResultContracts.RequestPermission(), granted -> {
+                if (granted) {
+                    mostrarSelectorDeHora();
+                } else {
+                    Toast.makeText(this, "Se requiere el permiso de notificaciones para agendar la ronda", Toast.LENGTH_LONG).show();
                 }
             });
 
@@ -59,13 +69,17 @@ public class MainActivity extends AppCompatActivity {
         // Antes de super.onCreate para que la actividad ya use el tema elegido por el usuario
         ThemeManager.applySavedMode(this);
         super.onCreate(savedInstanceState);
-        binding = ActivityMainBinding.inflate(getLayoutInflater());
+        ActivityMainBinding binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
         binding.btnLive.setOnClickListener(v -> onLiveClicked());
         binding.btnCapture.setOnClickListener(v -> takePhoto());
         binding.btnGallery.setOnClickListener(v ->
                 pickMediaLauncher.launch(new String[]{"image/*", "video/*"}));
+
+        // Conexión del botón para agendar ronda validando primero el permiso de notificación
+        binding.btnSchedule.setOnClickListener(v -> verificarPermisoNotificacion());
+
         binding.btnTips.setOnClickListener(v ->
                 startActivity(new Intent(this, TipsActivity.class)));
         binding.btnCredits.setOnClickListener(v ->
@@ -125,6 +139,29 @@ public class MainActivity extends AppCompatActivity {
         intent.setData(uri);
         // Permite a la actividad leer el archivo concedido por la cámara o la galería
         intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+        startActivity(intent);
+    }
+
+    // =======================================================
+    // MÉTODOS PARA VERIFICAR PERMISO Y AGENDAR LA RONDA
+    // =======================================================
+    private void verificarPermisoNotificacion() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            boolean granted = ContextCompat.checkSelfPermission(this, Manifest.permission.POST_NOTIFICATIONS)
+                    == PackageManager.PERMISSION_GRANTED;
+            if (granted) {
+                mostrarSelectorDeHora();
+            } else {
+                notificationPermissionLauncher.launch(Manifest.permission.POST_NOTIFICATIONS);
+            }
+        } else {
+            // En versiones anteriores a Android 13, no se requiere permiso en tiempo de ejecución
+            mostrarSelectorDeHora();
+        }
+    }
+
+    private void mostrarSelectorDeHora() {
+        Intent intent = new Intent(this, RoutineScheduleActivity.class);
         startActivity(intent);
     }
 }
